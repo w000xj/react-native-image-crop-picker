@@ -28,7 +28,7 @@ class RealPathUtil {
                 final String type = split[0];
 
                 if ("primary".equalsIgnoreCase(type)) {
-                    return Environment.getExternalStorageDirectory() + "/" + split[1];
+                    return StorageDirUtil.getExternalStorageDirectory(context) + "/" + split[1];
                 } else {
                     final int splitIndex = docId.indexOf(':', 1);
                     final String tag = docId.substring(0, splitIndex);
